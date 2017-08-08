@@ -1,26 +1,136 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A315i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad10_5" orientation="portrait">
+        <adaptation id="splitview2_3"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="504" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pound-yen-euro-dollar.png" translatesAutoresizingMaskIntoConstraints="NO" id="2hV-x8-LGD">
+                                <rect key="frame" x="20" y="0.0" width="464" height="157"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pound:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEB-Xv-ERp">
+                                <rect key="frame" x="20" y="220" width="252" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yen:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGb-W9-dhd">
+                                <rect key="frame" x="20" y="249" width="252" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Euro:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayb-QE-C9Z">
+                                <rect key="frame" x="20" y="278" width="252" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dollar Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tuc-cU-5ch">
+                                <rect key="frame" x="20" y="165" width="252" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9C-LA-2OJ">
+                                <rect key="frame" x="427.5" y="220" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQn-bn-Xgd">
+                                <rect key="frame" x="428.5" y="249" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obd-Fg-b8v">
+                                <rect key="frame" x="427.5" y="278" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRL-Pp-WLV">
+                                <rect key="frame" x="280" y="165" width="36" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BRL-Pp-WLV" secondAttribute="height" multiplier="6:5" id="Uve-8N-ZoS"/>
+                                </constraints>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tII-ir-aje"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gz5-dB-h2q">
+                                <rect key="frame" x="408" y="165" width="55" height="30"/>
+                                <state key="normal" title="Convert"/>
+                                <connections>
+                                    <action selector="convertCurrency:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hSi-jT-veT"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ayb-QE-C9Z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1Lx-py-Yge"/>
+                            <constraint firstItem="wGb-W9-dhd" firstAttribute="width" secondItem="Tuc-cU-5ch" secondAttribute="width" id="1Py-xl-S7A"/>
+                            <constraint firstItem="ayb-QE-C9Z" firstAttribute="width" secondItem="Tuc-cU-5ch" secondAttribute="width" id="1r8-J9-5jn"/>
+                            <constraint firstItem="IEB-Xv-ERp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8Vg-4u-oLu"/>
+                            <constraint firstAttribute="trailing" secondItem="i9C-LA-2OJ" secondAttribute="trailing" constant="41.666666666666686" id="H2n-qm-Hv5"/>
+                            <constraint firstItem="Tuc-cU-5ch" firstAttribute="top" secondItem="2hV-x8-LGD" secondAttribute="bottom" constant="8" symbolic="YES" id="JIV-vQ-JwD"/>
+                            <constraint firstItem="2hV-x8-LGD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="LOd-eV-4Dx"/>
+                            <constraint firstAttribute="trailing" secondItem="TQn-bn-Xgd" secondAttribute="trailing" constant="40.666666666666686" id="PDD-6B-Bbz"/>
+                            <constraint firstItem="Tuc-cU-5ch" firstAttribute="top" secondItem="2hV-x8-LGD" secondAttribute="bottom" constant="8" symbolic="YES" id="Pyg-mf-WWY"/>
+                            <constraint firstItem="2hV-x8-LGD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="WG1-R9-ilU"/>
+                            <constraint firstItem="IEB-Xv-ERp" firstAttribute="width" secondItem="Tuc-cU-5ch" secondAttribute="width" id="Z4q-dN-UAo"/>
+                            <constraint firstItem="Gz5-dB-h2q" firstAttribute="top" secondItem="2hV-x8-LGD" secondAttribute="bottom" constant="8" id="awJ-lk-aPA"/>
+                            <constraint firstItem="Tuc-cU-5ch" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cg9-G7-CPx"/>
+                            <constraint firstItem="wGb-W9-dhd" firstAttribute="top" secondItem="i9C-LA-2OJ" secondAttribute="bottom" constant="8" symbolic="YES" id="fFq-Ui-lbs"/>
+                            <constraint firstItem="BRL-Pp-WLV" firstAttribute="leading" secondItem="Tuc-cU-5ch" secondAttribute="trailing" constant="8" id="fmy-2G-6mB"/>
+                            <constraint firstItem="obd-Fg-b8v" firstAttribute="baseline" secondItem="ayb-QE-C9Z" secondAttribute="baseline" id="jxe-Jt-EJz"/>
+                            <constraint firstAttribute="trailing" secondItem="obd-Fg-b8v" secondAttribute="trailing" constant="41.666666666666686" id="loc-Kq-F3y"/>
+                            <constraint firstItem="2hV-x8-LGD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lzY-YN-0xD"/>
+                            <constraint firstItem="Tuc-cU-5ch" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="nNN-53-IXt"/>
+                            <constraint firstItem="Tuc-cU-5ch" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="r0O-eM-k3K"/>
+                            <constraint firstItem="wGb-W9-dhd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="reZ-DY-qm1"/>
+                            <constraint firstItem="ayb-QE-C9Z" firstAttribute="top" secondItem="TQn-bn-Xgd" secondAttribute="bottom" constant="8" symbolic="YES" id="rkt-cf-v1w"/>
+                            <constraint firstItem="IEB-Xv-ERp" firstAttribute="top" secondItem="Tuc-cU-5ch" secondAttribute="bottom" constant="25" id="sFT-5c-ATP"/>
+                            <constraint firstItem="BRL-Pp-WLV" firstAttribute="top" secondItem="2hV-x8-LGD" secondAttribute="bottom" constant="8" id="sRD-JS-Lkz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Gz5-dB-h2q" secondAttribute="trailing" constant="21" id="vSz-15-9X6"/>
+                            <constraint firstItem="TQn-bn-Xgd" firstAttribute="baseline" secondItem="wGb-W9-dhd" secondAttribute="baseline" id="wr7-cI-4x7"/>
+                            <constraint firstItem="i9C-LA-2OJ" firstAttribute="baseline" secondItem="IEB-Xv-ERp" secondAttribute="baseline" id="yUF-Ko-Hp8"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="euroLabel" destination="obd-Fg-b8v" id="Aav-HF-BUv"/>
+                        <outlet property="inputTextField" destination="Tuc-cU-5ch" id="esQ-VH-Xzb"/>
+                        <outlet property="poundLabel" destination="i9C-LA-2OJ" id="ndi-DN-oZx"/>
+                        <outlet property="yenLabel" destination="TQn-bn-Xgd" id="JG2-La-s4e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="76.875" y="-277.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pound-yen-euro-dollar.png" width="439" height="157"/>
+    </resources>
 </document>
